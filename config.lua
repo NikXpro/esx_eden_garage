@@ -13,6 +13,7 @@ Config.Garages = {
 		Size  = {x = 3.0, y = 3.0, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
 		Marker = 1,
+		Blips = true,
 		SpawnPoint = {
 			Pos = {x=229.700, y= -800.1149, z= 29.5722},
 			Color = {r=0,g=255,b=0},
@@ -31,6 +32,7 @@ Config.Garages = {
 		Size  = {x = 3.0, y = 3.0, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
 		Marker = 1,
+		Blips = true,
 		SpawnPoint = {
 			Pos = {x=128.7822, y= 6622.9965, z= 30.7828},
 			Color = {r=0,g=255,b=0},
