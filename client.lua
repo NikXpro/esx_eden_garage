@@ -46,16 +46,17 @@ function refreshBlips()
 	local blipInfo = {}	
 
 	for zoneKey,zoneValues in pairs(Config.Garages)do
-
-		local blip = AddBlipForCoord(zoneValues.Pos.x, zoneValues.Pos.y, zoneValues.Pos.z)
-		SetBlipSprite (blip, Config.BlipInfos.Sprite)
-		SetBlipDisplay(blip, 4)
-		SetBlipScale  (blip, 1.2)
-		SetBlipColour (blip, Config.BlipInfos.Color)
-		SetBlipAsShortRange(blip, true)
-		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentString(zoneKey)
-		EndTextCommandSetBlipName(blip)
+		if zoneValues.Blips == true then
+			local blip = AddBlipForCoord(zoneValues.Pos.x, zoneValues.Pos.y, zoneValues.Pos.z)
+			SetBlipSprite (blip, Config.BlipInfos.Sprite)
+			SetBlipDisplay(blip, 4)
+			SetBlipScale  (blip, 1.2)
+			SetBlipColour (blip, Config.BlipInfos.Color)
+			SetBlipAsShortRange(blip, true)
+			BeginTextCommandSetBlipName("STRING")
+			AddTextComponentString(zoneKey)
+			EndTextCommandSetBlipName(blip)
+		end
 	end
 end
 -- Fin Gestion des Blips
